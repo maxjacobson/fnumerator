@@ -46,6 +46,7 @@ require "our/enumerator"
           expect(subject.next).to eq(nil)
           expect(subject.next).to eq(5)
           expect { subject.next }.to raise_error StopIteration, "iteration reached an end"
+          expect { subject.next }.to raise_error StopIteration, "iteration reached an end"
         end
       end
     end
