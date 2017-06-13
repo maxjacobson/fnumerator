@@ -16,6 +16,7 @@ end
 module Our
   class Enumerator
     def initialize(&block)
+      raise ArgumentError if block.nil?
       @orig_block = block
       @block = Fiber.new { block.dup.call(Yielder.new) }
     end

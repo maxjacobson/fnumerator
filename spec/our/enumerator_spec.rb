@@ -50,5 +50,17 @@ require "our/enumerator"
         end
       end
     end
+
+    context "no block passed" do
+      subject {
+        described_class.new
+      }
+
+      describe "#initialize" do
+        it do
+          expect { subject }.to raise_error ArgumentError
+        end
+      end
+    end
   end
 end
