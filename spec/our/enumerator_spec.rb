@@ -25,7 +25,7 @@ require "our/enumerator"
       describe "#take" do
         it "takes the first n yielded items" do
           expect(subject.take(3)).to eq([0, 1, 2])
-          expect(subject.take(3)).to eq([0, 1, 2])
+          expect(subject.take(4)).to eq([0, 1, 2, 3])
         end
       end
     end
